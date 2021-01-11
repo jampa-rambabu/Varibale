@@ -1,0 +1,10 @@
+---
+- name: Verifying the Variiables
+  hosts: all
+  become: true
+  vars: 
+    Sname=httpd
+    Sstate=latest
+  tasks: 
+  - name: start {{Sname}} services
+    service: name={{Sname}} state={{Sstate}}
