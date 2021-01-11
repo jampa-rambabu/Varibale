@@ -4,7 +4,7 @@
   become: true
   vars: 
    Sname: httpd
-   Sstate: latest
+   Sstate: absent
   tasks: 
   - name: start {{Sname}} services
-    service: name={{Sname}} state={{Sstate}}
+    yum: name={{Sname}} state={{Sstate}}
