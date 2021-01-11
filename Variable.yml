@@ -3,8 +3,8 @@
   hosts: all
   become: true
   vars: 
-    Sname=httpd
-    Sstate=latest
+   Sname: httpd
+   Sstate: latest
   tasks: 
   - name: start {{Sname}} services
     service: name={{Sname}} state={{Sstate}}
